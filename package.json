@@ -2,10 +2,12 @@
   "name": "new-promotions",
   "version": "1.0.0",
   "private": false,
-  "authors": [{
-    "name": "Alan Rad",
-    "email": "me@alanrad.com"
-  }],
+  "authors": [
+    {
+      "name": "Alan Rad",
+      "email": "me@alanrad.com"
+    }
+  ],
   "engines": {
     "node": ">=8.10.0",
     "npm": ">=5.2.0"

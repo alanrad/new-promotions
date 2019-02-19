@@ -7,9 +7,7 @@ export class App extends Component {
   render() {
     return (
       <ApolloStore>
-        <div className="app-container">
-          <Pages />
-        </div>
+        <Pages />
       </ApolloStore>
     );
   }

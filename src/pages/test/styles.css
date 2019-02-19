@@ -1,0 +1,36 @@
+.events-viewer {
+  margin: 20px;
+  width: 100%;
+  border: 1px solid #dfe2e5;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.row.alt {
+  background-color: #f6f8fa;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.header {
+  border: 1px solid #dfe2e5;
+  padding: 6px 12px;
+  height: 30px;
+  font-weight: bold;
+}
+
+.cell {
+  border: 1px solid #dfe2e5;
+  height: 30px;
+  padding: 6px 12px;
+}

@@ -1,0 +1,37 @@
+.events-viewer {
+  margin: 15px;
+  width: 500px;
+}
+
+.row,
+.header-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.row.alt {
+  background-color: #f6f8fa;
+}
+
+.row:hover {
+  background-color: #e4eef8;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.cell {
+  height: 30px;
+  padding: 6px 12px;
+  line-height: 30px;
+}
+
+.cell.header {
+  font-weight: bold;
+}
