@@ -1,30 +1,43 @@
+/*
+ * Events Container
+ * Container are concerned with how things work
+ * Provide the data and behavior to view or other container components
+ * Are often stateful as they tend to serve as data sources
+ */
+
 import React, { Component } from 'react';
 import { Table } from '../components/Table';
+import { eventsProvider } from '../providers/eventsProvider';
+import * as cartActions from '../actions/cartActions';
 
-interface IFilterContainerStates {
+interface IEventsContainerStates {
   headers: object;
   events: object;
 }
 
-export class EventsContainer extends Component<{}, IFilterContainerStates> {
+export class EventsContainer extends Component<{}, IEventsContainerStates> {
   state = {
     headers: ['Event', 'Cost', 'Number of tickets'],
-    events: [
-      { id: 1, event: 'Kids Party', cost: 220, __typename: 'Event' },
-      { id: 2, event: 'Wine Tour', cost: 440, __typename: 'Event' },
-      { id: 3, event: 'Team Building', cost: 800, __typename: 'Event' },
-      { id: 4, event: 'Picnic', cost: 110, __typename: 'Event' },
-    ],
+    events: eventsProvider.getAvailableEvents(),
   };
 
-  // componentWillMount() {
-  // }
-
-  // componentWillUnmount() {
-  // }
+  updateOrderState = (order: any): void => {
+    cartActions.updateCart(
+      Object.keys(order).map(key => ({
+        eventId: Number(key),
+        numOfItems: order[key],
+      }))
+    );
+  };
 
   render() {
     const { headers, events } = this.state;
-    return <Table headers={headers} events={events} />;
+    return (
+      <Table
+        headers={headers}
+        events={events}
+        orderUpdated={state => this.updateOrderState(state)}
+      />
+    );
   }
 }

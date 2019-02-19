@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ApolloStore } from '../providers/ApolloStore';
+import { ApolloStore } from './ApolloStore';
 import { Pages } from '../pages';
 import './App.css';
 
