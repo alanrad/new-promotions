@@ -8,11 +8,11 @@ Keeping the data concerns away from the view components and into the container c
 
 #### Terms used in my simple application design:
 
-Container: controls views and is concerned with how things work. They can ask for an action to be dispatched
-Component: is purely presentational and is concerned with how things look
-Action: is an object literal containing the new fields of data and a specific action type
-Resolver: could interact with the server if needed, updates the store and then let the provider know.
-Provider: gets the latest state from the store. It emits a "change" message if relevant data is updated.
+- Container: controls views and is concerned with how things work. They can ask for an action to be dispatched
+- Component: is purely presentational and is concerned with how things look
+- Action: is an object literal containing the new fields of data and a specific action type
+- Resolver: could interact with the server if needed, updates the store and then let the provider know.
+- Provider: gets the latest state from the store. It emits a "change" message if relevant data is updated.
 
 Please note: I didn't get time to finish the cart view but the app is smart enough to know which promotions can be applied based on the selected events.
 
