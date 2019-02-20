@@ -8,6 +8,31 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.App {
-  text-align: center;
+p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.about-app {
+  padding: 20px;
+}
+
+.about-app h2 {
+  margin: 0;
+}
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+}
+
+.flex-item {
+  padding: 5px;
 }

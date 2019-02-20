@@ -1,5 +1,8 @@
-// Provide default application state
-// Used to write initial state to the cache
+/*
+ * Provide default application state
+ * Used to write initial state to the cache
+ * We don't consume any API in the mini app and we use normalized cache to source our data
+ */
 
 export const defaults = {
   cart: [],
@@ -15,7 +18,8 @@ export const defaults = {
       events: [],
       numOfItems: 5,
       price: null,
-      percentage: { value: 20, item: 5, __typename: 'PercentDiscount' }, // item: 0 => applies discount to the total price for items included in this promo
+      percentage: 20,
+      whichItem: 5,
       freeItems: 0,
       rule: 'Buy 5, Get 20% off the 5th experience',
       __typename: 'Promo',
@@ -26,6 +30,7 @@ export const defaults = {
       numOfItems: 2,
       price: 1500,
       percentage: null,
+      whichItem: 0,
       freeItems: 0,
       rule: 'Buy 2 for $1500',
       __typename: 'Promo',
@@ -36,6 +41,7 @@ export const defaults = {
       numOfItems: 4,
       price: null,
       percentage: null,
+      whichItem: 0,
       freeItems: 1, // free items are the lowest priced items
       rule: 'Buy 4, ONLY Pay for 3',
       __typename: 'Promo',
@@ -46,6 +52,7 @@ export const defaults = {
       numOfItems: 2,
       price: null,
       percentage: null,
+      whichItem: 0,
       freeItems: 1,
       rule: 'Buy 2, get 1 free',
       __typename: 'Promo',

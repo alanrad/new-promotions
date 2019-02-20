@@ -8,7 +8,7 @@
 
 import React, { Component } from 'react';
 import * as ClassNames from 'classnames';
-import { isEven } from '../utils/common';
+import { isEven, formatter } from '../utils/common';
 import './styles/table.css';
 
 interface ITableProps {
@@ -57,7 +57,7 @@ export class Table extends Component<ITableProps, ITableStates> {
               <div className="cell">{event}</div>
             </div>
             <div className="column">
-              <div className="cell">{cost}</div>
+              <div className="cell">{formatter.format(cost)}</div>
             </div>
             <div className="column">
               <div className="cell">
@@ -78,7 +78,7 @@ export class Table extends Component<ITableProps, ITableStates> {
           <div className="column">
             <div className="cell">
               <button className="button" onClick={this.submitOrder}>
-                Add
+                Update
               </button>
             </div>
           </div>

@@ -7,7 +7,7 @@
 
 import React, { Component } from 'react';
 import { Table } from '../components/Table';
-import { eventsProvider } from '../providers/eventsProvider';
+import { eventProvider } from '../providers/eventProvider';
 import * as cartActions from '../actions/cartActions';
 
 interface IEventsContainerStates {
@@ -18,7 +18,7 @@ interface IEventsContainerStates {
 export class EventsContainer extends Component<{}, IEventsContainerStates> {
   state = {
     headers: ['Event', 'Cost', 'Number of tickets'],
-    events: eventsProvider.getAvailableEvents(),
+    events: eventProvider.getAvailableEvents(),
   };
 
   updateOrderState = (order: any): void => {

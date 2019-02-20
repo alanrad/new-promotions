@@ -20,7 +20,6 @@ class CartResolver {
           __typename: 'CartItem',
         })),
       };
-      console.log(data);
       client.writeQuery({ query: CART_DATA, data });
       resolve(true);
     });
